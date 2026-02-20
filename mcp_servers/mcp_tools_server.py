@@ -7,17 +7,17 @@ from duckduckgo_search import DDGS
 ############## For NOTEBOOK 3_MCP_with_memory.ipynb ##############
 ## Uncomment the following lines to connect to Redis for the notebook exercises.
 
-from mcp.server.transport_security import TransportSecuritySettings
-mcp: FastMCP = FastMCP("MemoryServer", 
-                       host="127.0.0.1", 
-                       port=8000,
-                       transport_security=TransportSecuritySettings(enable_dns_rebinding_protection=False)
-                       )
+# from mcp.server.transport_security import TransportSecuritySettings
+# mcp: FastMCP = FastMCP("MemoryServer", 
+#                        host="127.0.0.1", 
+#                        port=8000,
+#                        transport_security=TransportSecuritySettings(enable_dns_rebinding_protection=False)
+#                        )
 
 
 ############### For NOTEBOOK 3_MCP_with_memory.ipynb ##############
 ## Comment this line out if you want to connect to Redis.
-# mcp: FastMCP = FastMCP("SuperServer")
+mcp: FastMCP = FastMCP("SuperServer")
 
 
 
@@ -43,9 +43,9 @@ def read_local_file(file_path: str) -> str:
 
     
 if __name__ == "__main__":
-    # mcp.run()
+    mcp.run()
     
     ## For NOTEBOOK 3_MCP_with_memory.ipynb, use this line instead to run with SSE transport:
     # comment the above line
     
-    mcp.run(transport="sse")
+    # mcp.run(transport="sse")
