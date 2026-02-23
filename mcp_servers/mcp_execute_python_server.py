@@ -8,7 +8,7 @@ from mcp.server.transport_security import TransportSecuritySettings
 mcp: FastMCP = FastMCP(
     "SuperServer", 
     host="127.0.0.1", 
-    port=8000,
+    port=54321,
     transport_security=TransportSecuritySettings(
         enable_dns_rebinding_protection=False
     )
