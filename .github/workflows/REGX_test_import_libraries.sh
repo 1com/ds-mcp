@@ -31,6 +31,7 @@ cat  "$PYTHON_FILE"
 echo "" >> "$PYTHON_FILE.tmp"
 echo "def test_import_libraries():" >> "$PYTHON_FILE.tmp"
 echo "    try:" >> "$PYTHON_FILE.tmp"
+echo "        pass" >> "$PYTHON_FILE.tmp" # <--- ADD THIS LINE
 grep  "import" "$PYTHON_FILE" | sed 's/^/        /' >> "$PYTHON_FILE.tmp"
 echo "    except ImportError as e:" >> "$PYTHON_FILE.tmp"
 echo "        # If any of the libraries cannot be imported, the test will fail" >> "$PYTHON_FILE.tmp"
