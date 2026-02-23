@@ -11,6 +11,9 @@ This repository provides an introduction and practical examples of using the Mod
 
 - **`2_MCP_local_server.ipynb`**: Advanced usage showing how to run local MCP servers, chain tools (e.g., reading files and executing Python code), and use Chain of Thought prompting.
 
+- **`3_MCP_with_memory.ipynb`**: Runs the same MCP server as notebook 2 but with cache memory using redis. LLM will keep track of the conversation.
+
+
 - **`mcp_servers/`**: Folder containing MCP server implementations:
   - `the_math_server.py`: Math-related MCP server.
   - `mcp_http_server.py`: HTTP-based MCP server with tools for reading local files and executing Python code.
@@ -33,6 +36,20 @@ brew install ollama
 ollama pull llama3.2:1b
 ollama pull llama3.2:3b
 ```
+
+For Windows, Download Ollama from [here](https://ollama.com/download/windows)
+
+Start Ollama
+`brew services start ollama`
+
+Download and Start Redis
+```bash
+brew install redis
+brew services start redis
+```
+
+Check if redis is running
+`redis-cli ping` you should see a message `PONG`
 
 You can also use other LLMs for this repository, such as those from Groq. Get your [Groq API Key](https://console.groq.com/playground) for free.
 
