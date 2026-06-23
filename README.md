@@ -38,9 +38,9 @@ ollama pull llama3.2:1b
 ollama pull llama3.2:3b
 ```
 
-For Windows, Download Ollama from [here](https://ollama.com/download/windows)
+For Windows, download Ollama from [here](https://ollama.com/download/windows).
 
-Start Ollama
+Start Ollama (macOS/Homebrew):
 `brew services start ollama`
 
 Download and Start Redis
