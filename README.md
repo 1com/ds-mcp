@@ -11,7 +11,7 @@ This repository provides an introduction and practical examples of using the Mod
 
 - **`2_MCP_local_server.ipynb`**: Advanced usage showing how to run local MCP servers, chain tools (e.g., reading files and executing Python code), and use Chain of Thought prompting.
 
-- **`3_MCP_with_memory.ipynb`**: Runs the same MCP server as notebook 2 but with cache memory using redis. LLM will keep track of the conversation.
+- **`3_MCP_with_memory.ipynb`**: Demonstrates client-side, Redis-backed chat history (memory) while connecting to an MCP server over SSE.
 
 
 - **`mcp_servers/`**: Folder containing MCP server implementations:
