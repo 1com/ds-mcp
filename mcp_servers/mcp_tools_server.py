@@ -8,7 +8,7 @@ mcp: FastMCP = FastMCP(
     "MemoryServer", 
     host="127.0.0.1", 
     port=54321,
-    transport_security=TransportSecuritySettings(enable_dns_rebinding_protection=False)
+    transport_security=TransportSecuritySettings(enable_dns_rebinding_protection=True)
 )
 
 @mcp.tool()
