@@ -24,7 +24,7 @@ This repository provides an introduction and practical examples of using the Mod
 1. Set up your environment as described below.
 2. Start with `1_intro_to_MCP.ipynb` to understand basic MCP concepts.
 3. Proceed to `2_MCP_local_server.ipynb` for advanced server-based implementations.
-4. In Notebook `3_MCP_with_memory.ipynb` you will find mcp servers with redis caching.
+4. In Notebook `3_MCP_with_memory.ipynb` you will find client-side Redis-backed chat history (memory) examples.
 5. Explore the `mcp_servers/` folder to understand and modify server implementations.
 
 --- 
