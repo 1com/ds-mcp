@@ -14,5 +14,5 @@ def add_numbers(a: int, b: int) -> int:
 
 if __name__ == "__main__":
     # Force SSE transport to bypass Windows stdio pipe limits
-    print("🚀 Starting Math Server on http://127.0.0.1:54321...")
+    print("🚀 Starting Math Server on http://127.0.0.1:54321/sse ...")
     mcp.run(transport="sse")
