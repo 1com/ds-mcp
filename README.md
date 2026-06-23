@@ -11,6 +11,9 @@ This repository provides an introduction and practical examples of using the Mod
 
 - **`2_MCP_local_server.ipynb`**: Advanced usage showing how to run local MCP servers, chain tools (e.g., reading files and executing Python code), and use Chain of Thought prompting.
 
+- **`3_MCP_with_memory.ipynb`**: Demonstrates client-side, Redis-backed chat history (memory) while connecting to an MCP server over SSE.
+
+
 - **`mcp_servers/`**: Folder containing MCP server implementations:
   - `the_math_server.py`: Math-related MCP server.
   - `mcp_http_server.py`: HTTP-based MCP server with tools for reading local files and executing Python code.
@@ -21,7 +24,8 @@ This repository provides an introduction and practical examples of using the Mod
 1. Set up your environment as described below.
 2. Start with `1_intro_to_MCP.ipynb` to understand basic MCP concepts.
 3. Proceed to `2_MCP_local_server.ipynb` for advanced server-based implementations.
-4. Explore the `mcp_servers/` folder to understand and modify server implementations.
+4. In Notebook `3_MCP_with_memory.ipynb` you will find client-side Redis-backed chat history (memory) examples.
+5. Explore the `mcp_servers/` folder to understand and modify server implementations.
 
 --- 
 
@@ -33,6 +37,20 @@ brew install ollama
 ollama pull llama3.2:1b
 ollama pull llama3.2:3b
 ```
+
+For Windows, download Ollama from [here](https://ollama.com/download/windows).
+
+Start Ollama (macOS/Homebrew):
+`brew services start ollama`
+
+Download and Start Redis
+```bash
+brew install redis
+brew services start redis
+```
+
+Check if redis is running
+`redis-cli ping` you should see a message `PONG`
 
 You can also use other LLMs for this repository, such as those from Groq. Get your [Groq API Key](https://console.groq.com/playground) for free.
 
