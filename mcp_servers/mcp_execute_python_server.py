@@ -1,18 +1,10 @@
 import sys
 import subprocess
 import os
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 from mcp.server.transport_security import TransportSecuritySettings
 
-# Initialize with security settings that allow local development
-mcp: FastMCP = FastMCP(
-    "SuperServer", 
-    host="127.0.0.1", 
-    port=54321,
-    transport_security=TransportSecuritySettings(
-        enable_dns_rebinding_protection=False
-    )
-)
+mcp: MCPServer = MCPServer("SuperServer")
 
 
 @mcp.tool()
@@ -81,5 +73,10 @@ def execute_python_code(
 
 
 if __name__ == "__main__":
-    # Just specify the transport here
-    mcp.run(transport="sse")
+    # Security settings that allow local development are passed when the server starts
+    mcp.run(
+        transport="sse",
+        host="127.0.0.1",
+        port=54321,
+        transport_security=TransportSecuritySettings(enable_dns_rebinding_protection=False),
+    )
