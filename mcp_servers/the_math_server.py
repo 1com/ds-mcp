@@ -2,10 +2,12 @@ from mcp.server.mcpserver import MCPServer
 
 mcp: MCPServer = MCPServer("MathServer")
 
+
 @mcp.tool()
 def add_numbers(a: int, b: int) -> int:
     """Adds two numbers together."""
     return a + b
+
 
 if __name__ == "__main__":
     # Force SSE transport to bypass Windows stdio pipe limits
