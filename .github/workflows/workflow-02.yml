@@ -23,7 +23,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-22.04, ubuntu-20.04] 
+        os: [ ubuntu-22.04, ubuntu-24.04] 
         python-version: [3.13] 
 
 ## The actions
@@ -64,7 +64,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-2022, windows-2019]
+        os: [windows-2022, windows-2025]
         python-version: [3.13]
 
     steps:
@@ -109,7 +109,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest,macos-13]
+        os: [macos-latest, macos-15-intel]
         python-version: [3.13] 
 
     steps:
