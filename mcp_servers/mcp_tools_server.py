@@ -1,7 +1,7 @@
 import os
 import sys
 from mcp.server.mcpserver import MCPServer
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 
 mcp: MCPServer = MCPServer("MemoryServer")
 
