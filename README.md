@@ -80,7 +80,7 @@ The copied SSH URL will look like `git@github.com:<your-username>/<repo-name>.gi
 
 ### 3. Move into the Project Folder and Install Dependencies
 
-This installs all dependencies and creates a virtual environment in `.venv/`.
+First [install uv](https://docs.astral.sh/uv/getting-started/installation/). Then `uv sync` installs all dependencies and creates a virtual environment in `.venv/`.
 
 ```bash
 cd <repo-name>
